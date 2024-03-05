@@ -1,0 +1,20 @@
+@hostname = {{$processEnv APP_HOST}}
+@port = {{$processEnv APP_PORT}}
+@host = {{hostname}}:{{port}}
+@xsrftoken = MTY5NzE2MzE3OHxHeU1lbFprRWZfMDFiYmFuNTJEa3BFaF9XNVJjWFRhUENxRmtWdEZhWjJTQXdveGljQ0ItTlJkaVNMRmZVYktJNTdJZ1hVZ0Z4NG5JVTRtWGFmVHkwaVZaOWlNV0NDUFBaYTV0VGJtTENETVpSZ0RiZk9SM08wVmY5dExiQlk1Rl9NdWdYX0xGaTdNLXo4V1ZhdkdZakxoTnZsN3dqSGU4Sm1tT3xafaP57WXAEurPrr-UrX4WTgntAVUnf6aA0H3LfLmLAw==
+
+GET http://{{host}}/api/user/callback
+
+###
+GET http://{{host}}/api/user/session
+
+###
+POST http://{{host}}/api/roles
+X-XSRF-TOKEN: {{xsrftoken}}
+
+{
+  "roleName": "Admin"
+}
+
+###
+GET http://{{host}}/api/roles

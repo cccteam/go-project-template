@@ -1,0 +1,10 @@
+# This is used to hold the .envrc template file. This is maintained to keep all app environment variables up to date.
+# This file doesn't contain the values of the environment variables, but rather serves as a placeholder. 
+# Copy this to a new file called .envrc and fill in the values.
+# e.g.:
+
+# SQL username
+export APP_SQL_USERNAME='<username>'
+
+# SQL Password
+export APP_SQL_PASSWORD='<password>'
